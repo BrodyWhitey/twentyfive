@@ -1,0 +1,58 @@
+body {
+    margin:0;
+}
+
+
+#wrapper{
+    display: grid;
+    background-color: gray;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 50px 150px 300px;
+    grid-template-areas: 
+    'hd hd hd'
+    'as pop pop'
+    'as main as2'
+    ;
+    gap: 2px;
+}
+
+header{
+    grid-area: hd;
+    background-color: black;
+}
+
+#popular{
+    grid-area: pop;
+    background-color: black;
+}
+
+#aside{
+    grid-area: as;
+    background-color: black;
+}
+
+#scroll{
+    grid-area: main;
+    background-color: black;
+}
+
+#section{
+    grid-area: as2;
+    background-color: black;
+}
+
+
+@media screen and (max-width:500px) {
+    #wrapper{
+        background-color: gray;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 100px 300px;
+        grid-template-areas: 
+        'hd'
+        'pop'
+        'main'
+        ;
+        gap: 2px;
+    }
+}
